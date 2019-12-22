@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MobileSectionWrapper = styled.section`
-  min-height: 630px;
+  min-height: 730px;
   display: flex;
   align-items: center;
   margin-bottom: 140px;
@@ -34,7 +34,6 @@ const MobileSectionWrapper = styled.section`
 const SectionObject = styled.div`
   position: absolute;
   width: 55%;
-  height: 100%;
   top: 0;
   right: 0;
   display: flex;
@@ -52,7 +51,6 @@ const SectionObject = styled.div`
     height: auto;
   }
   .objectWrapper {
-    margin-right: auto;
     position: relative;
 
     .bg-image {
