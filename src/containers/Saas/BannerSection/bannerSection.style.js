@@ -27,36 +27,51 @@ const BannerWrapper = styled.section`
   overflow: hidden;
   align-items: center;
   display: flex;
+
   @media (max-width: 990px) {
     padding-bottom: 60px;
     min-height: auto;
   }
-  @media (max-width: 767px) {
-    padding-top: 100px;
+
+  @media (max-width: 850px) {
+    padding-top: 140px;
     padding-bottom: 20px;
-    min-height: auto;
+    display: flex;
+    text-align: center;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+  }
+
+  @media (max-width: 576px) {
     text-align: center;
   }
+
   .row {
     position: relative;
     z-index: 1;
   }
+
   .button__wrapper {
     display: flex;
     align-items: center;
     margin-top: 60px;
     margin-bottom: 32px;
+    
     @media (max-width: 990px) {
       width: 70%;
     }
+
     @media (max-width: 767px) {
       flex-direction: column;
       margin: 30px auto;
     }
+
     @media (max-width: 576px) {
       width: 100%;
     }
+
     button {
       font-weight: 600;
       padding: 12px 20px;
@@ -66,6 +81,7 @@ const BannerWrapper = styled.section`
         margin-bottom: 35px;
       }
     }
+
     button:hover {
       box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.25);
     }
@@ -73,9 +89,9 @@ const BannerWrapper = styled.section`
 `;
 
 const BannerObject = styled.div`
+  margin-top: 70px;
   position: absolute;
-  width: 44%;
-  height: 100%;
+  width: 50%;
   top: 0;
   right: 0;
   display: flex;
