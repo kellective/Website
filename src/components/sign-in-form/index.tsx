@@ -1,12 +1,12 @@
 import React, { Component, useState } from 'react'
 import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
-import Input from 'reusecore/src/elements/Input';
 import Button from 'reusecore/src/elements/Button';
-import SignUpWrapper, { ErrorMessage } from './signup.style';
+import Input from 'reusecore/src/elements/Input';
+import SignInWrapper, { ErrorMessage } from './signin.style';
 import { PageHOC } from '../page';
 
-const SignUpForm = ({
+const SignInForm = ({
   auth,
   payment,
   location,
@@ -26,18 +26,17 @@ const SignUpForm = ({
     });
   }
 
-  const rehydratePayment = (plan) => {
+  const rehydratePayment = (planId) => {
     console.log('Start rehydrate');
-    payment.upgrade(plan);
+    payment.upgrade(planId);
   }
 
-  const handleSignUp = (e: Event | React.FormEvent) => {
+  const handleOnLogin = (e: Event | React.FormEvent) => {
     e.preventDefault();
     const { email, password } = formValue;
     handleFieldChange('isLoading')(true);
-    auth.register(email, password)
+    auth.logIn(email, password)
       .then(data => {
-        navigate('/');
         setFormValue({
           ...formValue,
           isLoading: false
@@ -48,13 +47,23 @@ const SignUpForm = ({
 
         // Rehydrate payment
         if (location.state && location.state.planId) {
-          rehydratePayment(location.state);
+          rehydratePayment(location.state.planId);
         }
       })
-      .catch((error: Error) => {
+      .catch(error => {
+        let errorMessage = '';
+        switch (error.code) {
+          case 'auth/user-not-found':
+            errorMessage = 'Not found any credential. Did you sign up?';
+            break;
+          default:
+            errorMessage = error.message;
+            break;
+        }
+
         setFormValue({
           ...formValue,
-          error: error.message,
+          error: errorMessage,
           isLoading: false
         })
       })
@@ -68,9 +77,9 @@ const SignUpForm = ({
   }
 
   return (
-    <SignUpWrapper>
-      <form onSubmit={handleSignUp}>
-        <Heading as="h3" content="Register" />
+    <SignInWrapper>
+      <form onSubmit={handleOnLogin}>
+        <Heading as="h3" content="Login" />
         <label htmlFor="email">Email</label>
         <Input
           inputType="email"
@@ -94,10 +103,12 @@ const SignUpForm = ({
           <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {formValue.error}
         </ErrorMessage>}
 
-        <Button isLoading={formValue.isLoading} type="submit" onClick={handleSignUp} title="Register" />
+        <Button isLoading={formValue.isLoading} type="submit" onClick={handleOnLogin} title="Login" />
+
+        <Link to="/forgot">I forgot my password</Link>
       </form>
-    </SignUpWrapper>
+    </SignInWrapper>
   )
 };
 
-export default PageHOC(({ auth, payment }) => ({ auth, payment }))(SignUpForm);
+export default PageHOC(({ auth, payment }) => ({ auth, payment }))(SignInForm);
