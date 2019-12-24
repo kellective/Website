@@ -25,8 +25,8 @@ const FlexiblyOrganiseSection = ({
     <FlexiblyOrganiseSectionWrapper id="tagsSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} className="bg-img" alt="Background image" />
+          <Zoom left duration={700}>
+            <Image src={ImageBg} alt="BgImage" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade left>
@@ -53,6 +53,7 @@ const FlexiblyOrganiseSection = ({
           />
         </Box>
       </Container>
+
     </FlexiblyOrganiseSectionWrapper>
   );
 };
@@ -76,7 +77,9 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
     color: 'headingColor',
-    maxWidth: ['100%', '100%', '100%', '440px'],
+    mb: '20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
+    maxWidth: ['100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
   description: {

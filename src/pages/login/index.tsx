@@ -3,7 +3,7 @@ import DefaultPageLayout from '../../components/layout/default-page-layout'
 import SignInForm from '../../components/sign-in-form'
 import SignUpForm from '../../components/sign-up-form';
 import Container from 'common/src/components/UI/Container';
-import LoginForms from './loginForms.style';
+import LoginForms from './loginPage.style';
 
 export default class LoginPage extends React.PureComponent {
   render() {

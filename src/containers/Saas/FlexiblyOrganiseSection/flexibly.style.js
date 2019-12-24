@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FlexiblyOrganiseSectionWrapper = styled.section`
-  min-height: 700px;
+  min-height: 630px;
   display: flex;
   align-items: center;
   margin-bottom: 100px;
@@ -22,6 +22,7 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
 const SectionObject = styled.div`
   position: absolute;
   width: 51%;
+  height: 100%;
   top: 0;
   left: 0;
   display: flex;
@@ -43,8 +44,8 @@ const SectionObject = styled.div`
     height: auto;
   }
   .objectWrapper {
+    margin-right: auto;
     position: relative;
-
     .dashboardWrapper {
       position: absolute;
       top: 4vw;
