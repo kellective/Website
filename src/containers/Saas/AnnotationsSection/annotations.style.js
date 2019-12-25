@@ -12,8 +12,8 @@ const AnnotationsSectionWrapper = styled.section`
   }
 
   @media only screen and (max-width: 991px) {
-    min-height: 370px;
-    margin-bottom: 80px;
+    min-height: 500px;
+    margin-bottom: 40px;
   }
   
   @media (max-width: 850px) {

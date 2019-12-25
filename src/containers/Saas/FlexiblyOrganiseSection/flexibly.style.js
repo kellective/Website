@@ -4,17 +4,14 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   margin-bottom: 100px;
-=======
->>>>>>> more updates to responsiveness
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
-    min-height: 370px;
-    margin-bottom: 80px;
+    min-height: 500px;
+    margin-bottom: 40px;
   }
   @media (max-width: 850px) {
     min-height: auto;
