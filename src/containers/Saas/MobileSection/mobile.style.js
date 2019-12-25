@@ -19,12 +19,14 @@ const MobileSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
-
   }
 
   .mobileDownload {
     opacity: 0.5;
     margin-left: -15px;
+    max-width: 350px;
+    margin-bottom: 10px;
+
     @media (max-width: 850px) {
       margin: auto;
       width: 100%;

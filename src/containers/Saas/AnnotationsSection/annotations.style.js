@@ -6,13 +6,16 @@ const AnnotationsSectionWrapper = styled.section`
   align-items: center;
   margin-bottom: 100px;
   position: relative;
+
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
+
   @media only screen and (max-width: 991px) {
     min-height: 370px;
     margin-bottom: 80px;
   }
+  
   @media (max-width: 850px) {
      min-height: auto;
     display: block;

@@ -65,10 +65,7 @@ const BannerWrapper = styled.section`
     @media (max-width: 850px) {
       flex-direction: column;
       margin: 30px auto;
-    }
-
-    @media (max-width: 767px) {
-      width: 90%;
+      width: 100%;
     }
 
     @media (max-width: 576px) {
@@ -98,11 +95,24 @@ const BannerObject = styled.div`
   right: 0;
   display: flex;
   align-items: center;
+
   @media (max-width: 767px) {
     display: none;
   }
+
   .objectWrapper {
     position: relative;
+    @media (max-width: 850px) {
+        display: none;
+      }
+
+    .banner-bg {
+      width: 85%;
+      @media (max-width: 850px) {
+        display: none;
+      }
+    }
+
     .dashboardWrapper {
       position: absolute;
       top: -9px;
@@ -112,9 +122,11 @@ const BannerObject = styled.div`
         top: 20px;
         left: 120px;
       }
+
       @media (max-width: 850px) {
         display: none; 
       }
+
       @media (max-width: 576px) {
         position: static;
       }
