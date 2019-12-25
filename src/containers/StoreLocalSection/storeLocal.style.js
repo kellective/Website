@@ -34,14 +34,13 @@ const StoreLocalSectionWrapper = styled.section`
 const SectionObject = styled.div`
   position: absolute;
   width: 51%;
+  height: 100%;
   top: 0;
   left: 0;
   display: flex;
-  padding: 5px;
-  border-radius: 5px;
   align-items: center;
   justify-content: flex-end;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: relative;
     padding: 0 30px;
@@ -56,13 +55,16 @@ const SectionObject = styled.div`
     margin-right: 20px;
     height: auto;
   }
-  .dashboardWrapper {
+  .objectWrapper {
+    margin-right: auto;
+    position: relative;
+    .dashboardWrapper {
+      position: absolute;
       top: 4vw;
       left: 0;
 
       @media (max-width: 767px) {
         position: static;
-        position: relative;
         top: 0vw;
       }
 

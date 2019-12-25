@@ -115,14 +115,14 @@ const BannerObject = styled.div`
 
     .dashboardWrapper {
       position: absolute;
-      top: -9px;
-      right: -18px;
+      top: 50px;
+      right: -40px;
       .chatObject {
         position: absolute;
         top: 20px;
         left: 120px;
       }
-
+      
       @media (max-width: 850px) {
         display: none; 
       }
