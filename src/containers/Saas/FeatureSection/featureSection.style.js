@@ -5,21 +5,31 @@ const FeatureSectionWrapper = styled.section`
   background: #f9fbfd;
   padding: 40px 0 60px 0;
   margin-bottom: 60px;
+
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
   }
+
   @media (max-width: 767px) {
     padding: 60px 0 30px 0;
     background: none;
   }
+
   @media (max-width: 575px) {
     padding: 60px 0 0 0;
     margin-bottom: 0;
   }
 
+  @media (max-width: 850px) {
+    padding: 40px 0 0px 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+
   a {
     text-decoration: none;
   }
+
   .feature__block {
     position: relative;
     height: 100%;
@@ -35,7 +45,8 @@ const FeatureSectionWrapper = styled.section`
     &:hover i.tags-collections {
       background-position-x: -154px
     }
-    @media (max-width: 775px) {
+    
+    @media (max-width: 850px) {
       display: none;
     }
   }

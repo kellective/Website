@@ -13,7 +13,7 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
     min-height: 370px;
     margin-bottom: 80px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     min-height: auto;
     display: block;
   }
@@ -28,7 +28,7 @@ const SectionObject = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: relative;
     padding: 0 30px;
@@ -50,8 +50,10 @@ const SectionObject = styled.div`
       position: absolute;
       top: 4vw;
       left: 0;
+
       @media (max-width: 767px) {
         position: static;
+        top: 0vw;
       }
 
       .banner-img {

@@ -13,7 +13,7 @@ const BrowserIcons = styled.div`
       margin-left: 15px;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     justify-content: space-around;
   }
@@ -62,9 +62,13 @@ const BannerWrapper = styled.section`
       width: 70%;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 850px) {
       flex-direction: column;
       margin: 30px auto;
+    }
+
+    @media (max-width: 767px) {
+      width: 90%;
     }
 
     @media (max-width: 576px) {
@@ -75,7 +79,7 @@ const BannerWrapper = styled.section`
       font-weight: 600;
       padding: 12px 20px;
       min-height: 0;
-      @media (max-width: 767px) {
+      @media (max-width: 850px) {
         padding: 10px 14px;
         margin-bottom: 35px;
       }
@@ -107,6 +111,12 @@ const BannerObject = styled.div`
         position: absolute;
         top: 20px;
         left: 120px;
+      }
+      @media (max-width: 850px) {
+        display: none; 
+      }
+      @media (max-width: 576px) {
+        position: static;
       }
     }
   }
