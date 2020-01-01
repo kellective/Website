@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
@@ -25,13 +24,11 @@ const FlexiblyOrganiseSection = ({
     <FlexiblyOrganiseSectionWrapper id="tagsSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom left duration={700}>
-            <Image src={ImageBg} alt="BgImage" />
+          <Zoom>
+            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade left>
               <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
-            </Fade>
           </Card>
         </Card>
       </SectionObject>
@@ -53,7 +50,6 @@ const FlexiblyOrganiseSection = ({
           />
         </Box>
       </Container>
-
     </FlexiblyOrganiseSectionWrapper>
   );
 };
