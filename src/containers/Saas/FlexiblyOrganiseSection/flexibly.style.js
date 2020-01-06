@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FlexiblyOrganiseSectionWrapper = styled.section`
-  min-height: 630px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   margin-bottom: 100px;
